@@ -22,9 +22,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
         env:
-          TOKEN: ${{ secrets.TOKEN }}
+          CI: true
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
       - name: Run tests
         run: npm run test
