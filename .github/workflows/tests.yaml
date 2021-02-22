@@ -17,17 +17,14 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2.1.4
         with:
+          registry-url: https://npm.pkg.github.com/
+          scope: '@cratespace'
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
         run: npm install
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
 
       - name: Run tests
         run: npm run test
-
-      - name: Upload artifacts
-        uses: actions/upload-artifact@master
-        if: failure()
-        with:
-            name: Logs
-            path: ./storage/logs
