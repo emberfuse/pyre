@@ -23,7 +23,7 @@
     "bugs": {
         "url": "https://github.com/cratespace/config-js/issues"
     },
-    "homepage": "https://github.com/cratespace/config-js#readme",
+    "homepage": "https://github.com/cratespace/config-js#README.md",
     "devDependencies": {
         "axios-mock-adapter": "^1.19.0",
         "babel-cli": "^6.9.0",
