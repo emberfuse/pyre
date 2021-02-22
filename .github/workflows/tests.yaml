@@ -17,14 +17,10 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
-          registry-url: https://registry.npmjs.org
-          scope: '@cratespace'
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
         run: npm install
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Run tests
         run: npm run test
