@@ -1,5 +1,5 @@
 {
-    "name": "@cratespace/config-js",
+    "name": "config-js",
     "version": "1.0.1",
     "description": "A simple Laravel config helper method for Vue JS.",
     "main": "dist/index.js",
