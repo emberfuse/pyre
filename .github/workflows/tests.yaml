@@ -17,7 +17,6 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          always-auth: true
           registry-url: https://registry.npmjs.org
           scope: '@cratespace'
           node-version: ${{ matrix.node-version }}
